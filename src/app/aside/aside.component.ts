@@ -1,3 +1,4 @@
+import { Cars } from './../models/car-data';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./aside.component.css']
 })
 export class AsideComponent implements OnInit {
-
-  constructor() { }
+  resultados: number;
+  branches: string[];
+  constructor() {
+    this.resultados = Cars.cars.length;
+    this.branches = Cars.branches;
+   }
 
   ngOnInit() {
+  }
+
+  filtrarResultados() {
+
   }
 
 }

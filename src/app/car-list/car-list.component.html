@@ -1,10 +1,14 @@
-<div class="card-columns">
-  <div class="card" *ngFor="let car of cars">
+<input [(ngModel)]="searchText" placeholder="search text goes here">
+<div class="row">
+<div class="col-sm-4" *ngFor="let car of cars | searchfilter: searchText">
+  <div class="card">
     <img class="card-img-top" [src]="car.thumbnail" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">{{car.title}}</h5>
-      <p class="card-text">{{car.price}}</p>
-      <p class="card-text"><small class="text-muted">{{car.model}}</small></p>
+      <h5 class="card-title">{{car.price |currency : 'USD' : 'symbol' : '1.0'}}</h5>
+      <p class="card-text">{{car.model}}</p>
+      <p class="card-text">{{car.year}}</p>
+      <p class="card-text"><small class="text-muted">{{car.branch}}</small></p>
     </div>
   </div>
+</div>
 </div>

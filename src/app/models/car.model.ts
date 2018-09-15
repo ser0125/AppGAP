@@ -1,18 +1,16 @@
 export class Car {
   public id: number;
-  public title: string;
   public thumbnail: string;
   public model: string;
-  public year: Date;
+  public year: string;
   public branch: string;
   public price: number;
 
-  constructor(id: number, title: string, thumbnail: string,
-    model: string, year: Date, branch: string, price: number) {
+  constructor(id: number, model: string, thumbnail: string,
+    year: string, branch: string, price: number) {
     this.id = id;
-    this.title = title;
-    this.thumbnail = thumbnail;
     this.model = model;
+    this.thumbnail = thumbnail;
     this.year = year;
     this.branch = branch;
     this.price = price;

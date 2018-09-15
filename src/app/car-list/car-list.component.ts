@@ -1,3 +1,4 @@
+import { Car } from './../models/car.model';
 import { Cars } from './../models/car-data';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./car-list.component.css']
 })
 export class CarListComponent implements OnInit {
-  cars: any;
+  cars: Car[];
+  branchValue: string;
   constructor() {
     this.cars = Cars.cars;
-    console.log(this.cars);
    }
 
   ngOnInit() {
