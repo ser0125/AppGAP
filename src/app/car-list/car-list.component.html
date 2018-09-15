@@ -1,0 +1,10 @@
+<div class="card-columns">
+  <div class="card" *ngFor="let car of cars">
+    <img class="card-img-top" [src]="car.thumbnail" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{car.title}}</h5>
+      <p class="card-text">{{car.price}}</p>
+      <p class="card-text"><small class="text-muted">{{car.model}}</small></p>
+    </div>
+  </div>
+</div>
