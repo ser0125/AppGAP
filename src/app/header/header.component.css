@@ -1,0 +1,14 @@
+#cabecera {
+    background: #931010;
+    border-bottom: 1px solid #857671;
+}
+
+#divCabecera {
+    font-size: 50px;
+    font: bold;
+    color: white;
+}
+.tituloCabecera{
+    margin-bottom: 0;
+}
+
