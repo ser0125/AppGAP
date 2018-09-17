@@ -1,4 +1,7 @@
+import { SharedService } from './../shared.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Car } from '../models/car.model';
 
 @Component({
   selector: 'app-car-detail',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarDetailComponent implements OnInit {
 
-  constructor() { }
+  id: number;
+  car: Car;
+  constructor(private sharedService: SharedService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe(
+      (params: Params) => {
+        this.id = +params['id'];
+        console.log(this.id);
+        this.car = this.sharedService.getCar(this.id);
+        console.log(this.sharedService.getCar(this.id));
+      }
+    );
   }
 
 }

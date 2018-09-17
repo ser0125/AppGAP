@@ -1,3 +1,29 @@
-<p>
-  car-detail works!
-</p>
+<div class="row">
+  <div class="col-sm-8">
+    <div class="row">
+    <div class="col-sm-2">
+        <img  [src]="car.pictures[0]" alt="Car picture">
+        <img  [src]="car.pictures[1]" alt="Car picture">
+        <img  [src]="car.pictures[2]" alt="Car picture">
+    </div>
+<div class="col-sm-6">
+    <img [src]="car.pictures[0]" alt="Car picture">
+</div>
+</div>
+</div>
+<div class="col-sm-4">
+  <h3>Ficha Técnica</h3>
+  <section class="features">
+    <ul class="features-list">
+      <li class="feature-item" *ngFor="let feature of car.features">
+        <strong>{{feature.name}}</strong>
+        <span>{{feature.value}}</span>
+      </li>
+      <li class="feature-item" >
+          <strong>Año</strong>
+          <span>{{car.year}}</span>
+      </li>
+    </ul>
+  </section>
+</div>
+</div>

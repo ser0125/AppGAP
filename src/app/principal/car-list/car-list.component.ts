@@ -1,6 +1,5 @@
 import { SharedService } from './../../shared.service';
 import { Car } from './../../models/car.model';
-import { Cars } from './../../models/car-data';
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
@@ -15,7 +14,6 @@ export class CarListComponent implements OnInit {
   subscription: Subscription;
   searchText: string;
   constructor(private sharedService: SharedService) {
-    this.cars = Cars.cars;
    }
 
   ngOnInit() {
@@ -23,6 +21,7 @@ export class CarListComponent implements OnInit {
     .subscribe((searchText: string) => {
       this.searchText = searchText;
     });
+    this.cars = this.sharedService.getCars();
   }
 
 }

@@ -1,0 +1,24 @@
+img{
+    max-width: 100%;
+}
+.col-sm-8{
+    border-right: 1px solid #ddd;
+}
+.features-list{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+.feature-item{
+    margin-top:20px;
+   flex: 0 33.33333%;
+}
+.feature-item strong{
+   
+    display: block;
+    color: #999;
+}
+div.col-sm-2 img{
+    border: 1px solid #ddd;
+    padding-bottom:23px;
+}

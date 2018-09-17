@@ -9,7 +9,7 @@ import { AsideComponent } from './principal/aside/aside.component';
 import { CarListComponent } from './principal/car-list/car-list.component';
 import { SearchfilterPipe } from './searchfilter.pipe';
 import { PrincipalComponent } from './principal/principal.component';
-import { CarDetailComponent } from './principal/car-list/car-detail/car-detail.component';
+import { CarDetailComponent } from './car-detail/car-detail.component';
 
 @NgModule({
   declarations: [

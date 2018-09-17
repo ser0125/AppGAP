@@ -1,4 +1,4 @@
-import { CarDetailComponent } from './principal/car-list/car-detail/car-detail.component';
+import { CarDetailComponent } from './car-detail/car-detail.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
