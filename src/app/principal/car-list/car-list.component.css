@@ -24,7 +24,6 @@
 }
 .car-img{
     max-width: 30%;
-
 }
 .description{
     display: inline-block;
@@ -33,3 +32,35 @@
 .description strong{
     display: block;
 }
+
+
+@media (max-width: 790px) {
+    .col-sm-4{
+        margin-top:20px;
+    }
+    .card{
+        display:block;
+        text-align: center;
+    }
+    .card-img-top{
+        width: auto;
+    }
+    .car-list{
+        width: 100%;
+        padding: 0;
+    }
+    .car-item{
+        margin: 0;
+        margin-right: 0.3em;
+    }
+    .btn{
+        width: 30%;
+        font-size:0.8em;
+    }
+}
+@media (max-width: 480px) {
+    .car-img{
+       display: none;
+    }
+}
+
