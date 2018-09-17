@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BreadcrumbService } from 'ng5-breadcrumb';
 
 @Component({
@@ -8,5 +8,8 @@ import { BreadcrumbService } from 'ng5-breadcrumb';
 })
 export class AppComponent {
   title = 'app';
-  constructor(private breadcrumbService: BreadcrumbService) {}
+  constructor(private breadcrumbService: BreadcrumbService) {
+  this.breadcrumbService.addFriendlyNameForRouteRegex('\\/comparar(\\?.*)?', 'Comparar');
+  this.breadcrumbService.hideRoute('/inicio');
+  }
 }

@@ -1,3 +1,20 @@
-<p>
-  compare-cars works!
-</p>
+
+ <div class="row compare">
+  <div class="col-sm-4" *ngFor="let car of cars">
+      <img [src]="car.pictures[0]" alt="Car picture">
+      <h6>{{car.model}}</h6>
+      <h3>{{car.price |currency : 'USD' : 'symbol' : '1.0'}}</h3>
+      <section class="features">
+          <ul class="features-list">
+            <li class="feature-item" *ngFor="let feature of car.features">
+              <strong>{{feature.name +": "}}</strong>
+              <span>{{feature.value}}</span>
+            </li>
+            <li class="feature-item" >
+                <strong>Año: </strong>
+                <span>{{car.year}}</span>
+            </li>
+          </ul>
+        </section>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.compare{
+    justify-content: center;
+}
+.compare img{
+    max-width: 100%;
+}
+h6{
+    color: gray;
+}
+h3{
+    text-align: center;
+}
+
+.features-list{
+    list-style: none;
+}
