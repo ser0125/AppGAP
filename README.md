@@ -36,3 +36,8 @@ Finally the last step is to launch the server with this command.
  ```
 ng serve --open
   ```
+
+#### Aditional note
+
+Also you can look the project develop in Heroku!!
+[![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge&style=flat)](https://angular-gap-frontend.herokuapp.com)
