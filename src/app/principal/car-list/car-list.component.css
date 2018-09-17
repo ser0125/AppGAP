@@ -1,3 +1,35 @@
 .card{
     margin-bottom: 15px;
+    cursor: pointer;
+}
+.car-list{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+.car-item{
+    margin-top:20px;
+   flex: 0 33.33333%;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e9ecef;
+    z-index: 100;
+}
+.car-img{
+    max-width: 30%;
+
+}
+.description{
+    display: inline-block;
+    margin-left: 10px;
+}
+.description strong{
+    display: block;
 }

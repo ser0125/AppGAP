@@ -13,6 +13,8 @@ export class CarListComponent implements OnInit {
   branchValue: string;
   subscription: Subscription;
   searchText: string;
+  compareValue = true;
+  currentBoxes = 0;
   constructor(private sharedService: SharedService) {
    }
 
@@ -23,5 +25,24 @@ export class CarListComponent implements OnInit {
     });
     this.cars = this.sharedService.getCars();
   }
-
+  onChange(car: any, isChecked: boolean) {
+    if (isChecked) {
+      this.compareValue = false;
+      car.checked = true;
+      this.currentBoxes++;
+    } else {
+      car.checked = false;
+      this.currentBoxes--;
+      if (this.currentBoxes === 0) {
+        this.compareValue = true;
+      }
+    }
+  }
+  checkCurrentBoxes(car) {
+    if (car.checked && this.currentBoxes === 2 || this.currentBoxes !== 2) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 }
