@@ -1,5 +1,6 @@
-import { Cars } from './../models/car-data';
-import { Component, OnInit } from '@angular/core';
+import { SharedService } from './../../shared.service';
+import { Cars } from './../../models/car-data';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-aside',
@@ -9,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class AsideComponent implements OnInit {
   resultados: number;
   branches: string[];
-  constructor() {
+  searchText: string;
+  constructor(private sharedService: SharedService) {
     this.resultados = Cars.cars.length;
     this.branches = Cars.branches;
    }
@@ -17,8 +19,8 @@ export class AsideComponent implements OnInit {
   ngOnInit() {
   }
 
-  filtrarResultados() {
-
+  onChange(newValue) {
+    this.sharedService.changeText(newValue);
   }
 
 }

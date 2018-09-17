@@ -3,12 +3,14 @@
   <h6>{{resultados + " resultados"}}</h6>
   <h5 class="subtitle">Filtrar por</h5>
     <h6 class="subtitle" for="branch">Marca</h6>
-              <select
+    <input type="text" [(ngModel)]="searchText" (ngModelChange)="onChange($event)" placeholder="Mazda">
+            <!--  <select
                id="branch" 
                name="branch">
                 <option *ngFor="let branch of branches"  [value]="branch">
                   {{branch}}
                 </option>
             </select>
-            <button class="btn btn-primary" type="submit" (click)="filtrarResultados()"> Aceptar</button>
+          -->
+           
 </aside>
