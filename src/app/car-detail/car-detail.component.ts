@@ -18,7 +18,6 @@ export class CarDetailComponent implements OnInit {
     this.route.params.subscribe(
       (params: Params) => {
         this.id = +params['id'];
-        console.log(this.id);
         this.car = this.sharedService.getCar(this.id);
         console.log(this.sharedService.getCar(this.id));
       }

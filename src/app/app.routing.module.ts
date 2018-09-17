@@ -5,7 +5,8 @@ import { NgModule } from '@angular/core';
 const appRoutes: Routes = [
     { path: '', redirectTo: '/listacarros', pathMatch: 'full' },
     { path: 'listacarros', component: PrincipalComponent },
-    { path: 'detalle/:id', component: CarDetailComponent}
+    { path: 'listacarros/:id', component: CarDetailComponent},
+    { path: '**', redirectTo: '/listacarros'}
 ];
 
 @NgModule({
