@@ -11,6 +11,7 @@ import { CarListComponent } from './principal/car-list/car-list.component';
 import { SearchfilterPipe } from './searchfilter.pipe';
 import { PrincipalComponent } from './principal/principal.component';
 import { CarDetailComponent } from './car-detail/car-detail.component';
+import { CompareCarsComponent } from './compare-cars/compare-cars.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CarDetailComponent } from './car-detail/car-detail.component';
     CarListComponent,
     SearchfilterPipe,
     PrincipalComponent,
-    CarDetailComponent
+    CarDetailComponent,
+    CompareCarsComponent
   ],
   imports: [
     BrowserModule,

@@ -8,10 +8,9 @@ export class Car {
   public price: number;
   public pictures: string[];
   public features: Feature[];
-  public checked: boolean;
 
   constructor(id: number, model: string, thumbnail: string,
-    year: string, branch: string, price: number, pictures: string[], features: Feature[], checked: boolean = false) {
+    year: string, branch: string, price: number, pictures: string[], features: Feature[]) {
     this.id = id;
     this.model = model;
     this.thumbnail = thumbnail;
@@ -20,6 +19,5 @@ export class Car {
     this.price = price;
     this.pictures = pictures;
     this.features = features;
-    this.checked = checked;
   }
 }

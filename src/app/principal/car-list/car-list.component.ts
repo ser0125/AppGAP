@@ -2,6 +2,7 @@ import { SharedService } from './../../shared.service';
 import { Car } from './../../models/car.model';
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-car-list',
@@ -15,7 +16,9 @@ export class CarListComponent implements OnInit {
   searchText: string;
   compareValue = true;
   currentBoxes = 0;
-  constructor(private sharedService: SharedService) {
+  carParams = [];
+  constructor(private sharedService: SharedService,
+              private router: Router) {
    }
 
   ngOnInit() {
@@ -25,24 +28,29 @@ export class CarListComponent implements OnInit {
     });
     this.cars = this.sharedService.getCars();
   }
-  onChange(car: any, isChecked: boolean) {
+  onChange(car: Car, isChecked: boolean) {
     if (isChecked) {
       this.compareValue = false;
-      car.checked = true;
       this.currentBoxes++;
+      this.carParams.push(car);
     } else {
-      car.checked = false;
       this.currentBoxes--;
+      this.carParams = this.carParams.filter(function(items) {
+        return items.id !== car.id;
+      });
       if (this.currentBoxes === 0) {
         this.compareValue = true;
       }
     }
   }
   checkCurrentBoxes(car) {
-    if (car.checked && this.currentBoxes === 2 || this.currentBoxes !== 2) {
+    if (car.value && this.currentBoxes === 2 || this.currentBoxes !== 2) {
       return false;
     } else {
       return true;
     }
+  }
+  onCompare() {
+    this.router.navigate(['/comparar'], { queryParams: { firstId: this.carParams[0].id, secondId: this.carParams[1].id } });
   }
 }
