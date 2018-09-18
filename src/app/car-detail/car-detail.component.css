@@ -36,5 +36,6 @@ div.col-sm-2 img{
     }
     .features-list{
         padding: 0;
+        justify-content: center;
     }
 }
